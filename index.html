@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VSCode & Python Installation Guide</title>
+  <title>VSCode & Python O'rnatish</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animations.css">
@@ -26,22 +26,17 @@
     </label>
   </div>
 
-  <div class="sound-toggle">
-    <button id="sound-button" aria-label="Toggle sound">
-      <span class="sound-on">🔊</span>
-      <span class="sound-off">🔇</span>
-    </button>
-  </div>
+
   
   <header>
     <div class="background-animation">
       <canvas id="particles"></canvas>
     </div>
     <div class="header-content">
-      <h1 class="title reveal-text">VSCode & Python</h1>
-      <h2 class="subtitle reveal-text">Installation Guide for Windows 11</h2>
-      <p class="description reveal-text">A step-by-step visual tutorial to get you coding in no time</p>
-      <button id="start-guide" class="cta-button">Start Installation Guide</button>
+      <h1 class="title reveal-text">Visual Studio Code & Python</h1>
+      <h2 class="subtitle reveal-text">Windows OS uchun o'rnatishni ketma ketlikda o'rganing!</h2>
+      <p class="description reveal-text">Qisqa vaqt ichida kodlashni o'rgatish uchun bosqichma-bosqich vizual qo'llanma</p>
+      <button id="start-guide" class="cta-button">O'rnatishni boshlash</button>
     </div>
   </header>
 
@@ -52,31 +47,31 @@
     <ul class="progress-steps">
       <li class="step active" data-step="intro">
         <div class="step-indicator">1</div>
-        <span class="step-name">Introduction</span>
+        <span class="step-name">Kirish</span>
       </li>
       <li class="step" data-step="vscode-download">
         <div class="step-indicator">2</div>
-        <span class="step-name">Download VSCode</span>
+        <span class="step-name">VSCode yuklab oling</span>
       </li>
       <li class="step" data-step="vscode-install">
         <div class="step-indicator">3</div>
-        <span class="step-name">Install VSCode</span>
+        <span class="step-name">VSCode-ni o'rnating</span>
       </li>
       <li class="step" data-step="python-download">
         <div class="step-indicator">4</div>
-        <span class="step-name">Download Python</span>
+        <span class="step-name">Python yuklab oling</span>
       </li>
       <li class="step" data-step="python-install">
         <div class="step-indicator">5</div>
-        <span class="step-name">Install Python</span>
+        <span class="step-name">Python-ni o'rnating</span>
       </li>
       <li class="step" data-step="vscode-python">
         <div class="step-indicator">6</div>
-        <span class="step-name">Setup Python in VSCode</span>
+        <span class="step-name">VSCode-da Python-ni o'rnating</span>
       </li>
       <li class="step" data-step="conclusion">
         <div class="step-indicator">7</div>
-        <span class="step-name">Conclusion</span>
+        <span class="step-name">Xulosa</span>
       </li>
     </ul>
   </nav>
@@ -84,149 +79,149 @@
   <main>
     <section id="intro" class="tutorial-section active">
       <div class="section-content">
-        <h2 class="section-title">Getting Started</h2>
-        <p class="section-description">Welcome to this interactive guide for installing Visual Studio Code and Python on Windows 11. This tutorial will walk you through each step with visual examples and clear instructions.</p>
+        <h2 class="section-title">Ishni boshlash</h2>
+        <p class="section-description">Ishni boshlashdan oldin siz shaxsiy computeringizni qanaqa xarakteristikada ekanligi bilib olishingiz talab etiladi. Uni bilish uchun computeringizdan Settings (Настройки) dan Sistema (Система) ga o'ting, u yerdan About the system (О системе) ga kirasiz.</p>
         
         <div class="info-card">
-          <div class="info-icon">ℹ️</div>
+          <div class="info-icon">❗</div>
           <div class="info-content">
-            <h3>What you'll need</h3>
+            <h3>Ushbu qo'llanma Windows 11 64x uchun moslashgan ammo Windows boshqa versiyalari ham deyarli o'rnatishda farq qilmaydi.</h3>
             <ul>
-              <li>Windows 11 operating system</li>
-              <li>Administrator access to your computer</li>
-              <li>Internet connection</li>
-              <li>Approximately 15-20 minutes of time</li>
+              <li>Windows 11 faqat 64x da ishlab chiqilgan</li>
+              <li>O'rnatish uchun computer o'zingizniki hamda admintrator bo'lishingiz shart</li>
+              <li>Keyingi o'rinda computerni internetga ulang</li>
+              <li>O'rnatish computer kuchiga qarab 10 daqiqadan 30 daqaiqagacha oladi</li>
             </ul>
           </div>
         </div>
         
         <div class="image-container parallax">
-          <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg" alt="Coding environment with computer" class="tutorial-image">
-          <div class="image-caption">Your development environment awaits</div>
+          <img src="images/vscode logo.jpg" alt="Visual Studio Code o'rnatish dasturlashga qo'yilgan birinchi qadam!" class="tutorial-image">
+          <div class="image-caption">Visual Studio Code o'rnatish dasturlashga qo'yilgan birinchi qadam!</div>
         </div>
         
         <div class="navigation-buttons">
-          <button class="nav-button next-button" data-next="vscode-download">Next: Download VSCode</button>
+          <button class="nav-button next-button" data-next="vscode-download">Davom etish: Visual Studioni yuklab olish</button>
         </div>
       </div>
     </section>
 
     <section id="vscode-download" class="tutorial-section">
       <div class="section-content">
-        <h2 class="section-title">Downloading Visual Studio Code</h2>
-        <p class="section-description">Let's start by downloading Visual Studio Code, a powerful and lightweight code editor perfect for Python development.</p>
+        <h2 class="section-title">Visual Studio Codeni yuklab olish</h2>
+        <p class="section-description">Yuklab olish uchun iltimos qadamlarni qoldirmang.</p>
         
         <div class="steps-container">
           <div class="step-card">
             <div class="step-number">1</div>
             <div class="step-content">
-              <h3>Open your web browser</h3>
-              <p>Launch any web browser on your Windows 11 computer</p>
+              <h3>Brauzerni oching</h3>
+              <p>Istalgan brauzerni ochishingiz mumkin. Chrome, Safari, Yandex, Edge, Opera</p>
             </div>
           </div>
           
           <div class="step-card">
             <div class="step-number">2</div>
             <div class="step-content">
-              <h3>Visit the VS Code website</h3>
-              <p>Navigate to <a href="https://code.visualstudio.com/" class="external-link" target="_blank">https://code.visualstudio.com/</a></p>
-              <div class="tooltip" data-tooltip="Click this link to open in a new tab">?</div>
+              <h3>VS Code rasmiy web saytiga tashrif buyuring</h3>
+              <p>Ushbu havolaga bosish orqali to'g'ridan to'gri rasmiy saytga tashrif buyurasiz  <a href="https://code.visualstudio.com/" class="external-link" target="_blank">https://code.visualstudio.com/</a></p>
+              <div class="tooltip" data-tooltip="Havola ustiga bosing!">?</div>
             </div>
           </div>
           
           <div class="step-card">
             <div class="step-number">3</div>
             <div class="step-content">
-              <h3>Download for Windows</h3>
-              <p>Click the download button for Windows</p>
+              <h3>Windows uchun yuklab oling</h3>
+              <p>Windows uchun yuklab olish tugmasini bosing va yuklash yankunlanguniga qadar kuting</p>
             </div>
           </div>
         </div>
         
         <div class="image-container parallax">
-          <img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg" alt="VS Code download page" class="tutorial-image">
-          <div class="image-caption">The VS Code download page</div>
+          <img src="images/install vs code.png" alt="VS Code yuklash saxifasi" class="tutorial-image">
+          <div class="image-caption">Bu VS Code yuklab olish saxifasi barcha OS lar uchun shu yerdan yuklab olishingiz mumkin!</div>
         </div>
         
         <div class="info-card warning">
           <div class="info-icon">⚠️</div>
           <div class="info-content">
-            <h3>Important Note</h3>
-            <p>Make sure to download the stable version for Windows, not the Insiders edition (unless you specifically want to try beta features).</p>
+            <h3>Muhim eslatma</h3>
+            <p>Insider versiyasini emas, balki Windows uchun barqaror versiyani yuklab olganingizga ishonch hosil qiling (agar siz beta-versiyasini sinab ko'rmoqchi bo'lmasangiz).</p>
           </div>
         </div>
         
         <div class="navigation-buttons">
-          <button class="nav-button prev-button" data-prev="intro">Previous: Introduction</button>
-          <button class="nav-button next-button" data-next="vscode-install">Next: Install VSCode</button>
+          <button class="nav-button prev-button" data-prev="intro">Orqaga: Kirish</button>
+          <button class="nav-button next-button" data-next="vscode-install">Keyingi VSCode-ni o'rnatish</button>
         </div>
       </div>
     </section>
 
     <section id="vscode-install" class="tutorial-section">
       <div class="section-content">
-        <h2 class="section-title">Installing Visual Studio Code</h2>
-        <p class="section-description">Now that you've downloaded the VS Code installer, let's go through the installation process.</p>
+        <h2 class="section-title">Visual Studio Codeni o'rnatish</h2>
+        <p class="section-description">Endi siz VS Code o'rnatuvchisini yuklab olganingizdan so'ng, o'rnatish jarayoniga o'tamiz. Yuklab olingan .exe faylni shunchaki oching.</p>
         
         <div class="steps-container">
           <div class="step-card">
             <div class="step-number">1</div>
             <div class="step-content">
-              <h3>Run the installer</h3>
-              <p>Locate the downloaded file (usually in your Downloads folder) and double-click it</p>
+              <h3>Dasturni oching</h3>
+              <p>Yuklab olingan faylni toping (odatda Yuklashlar jildida bo'ladi) va uni ikki marta bosing</p>
             </div>
           </div>
           
           <div class="step-card">
             <div class="step-number">2</div>
             <div class="step-content">
-              <h3>Accept the agreement</h3>
-              <p>Read and accept the license agreement</p>
+              <h3>Shartnomani qabul qiling</h3>
+              <p>Litsenziya shartnomasini o'qing va qabul qiling aks xolda dasturni o'rnatish uchun Keyingi (Next) tugmasi bosilmaydi!</p>
             </div>
           </div>
           
           <div class="step-card">
             <div class="step-number">3</div>
             <div class="step-content">
-              <h3>Choose installation location</h3>
-              <p>Select where you want to install VS Code or use the default location</p>
+              <h3>Dastur o'rnatilishi uchun joylashuv belgilang!</h3>
+              <p>VS kodini o'rnatmoqchi bo'lgan joyni tanlang yoki standart joylashuvdan foydalaning. Standart C: diskga o'rnatiladi yoki istalgan diskga o'rnatishingiz mumkin.</p>
             </div>
           </div>
           
           <div class="step-card">
             <div class="step-number">4</div>
             <div class="step-content">
-              <h3>Select additional tasks</h3>
-              <p>Choose options like "Add to PATH" (recommended) and "Create desktop icon"</p>
-              <div class="tooltip" data-tooltip="Adding to PATH allows you to open VS Code from the command line">?</div>
+              <h3>Qo'shimcha vazifalarni tanlang</h3>
+              <p>Ochilgan oynadan majburiy "Add to PATH" ga belgi qo'ying qolganlari xitiyoriy deyarli barchasia belgi qo'yishingiz mumkin.</p>
+              <div class="tooltip" data-tooltip="Add to PATH ga belgi qo'ymagan bo'lsangiz bir qancha xatolikka duch kelasiz, shu sabablama qo'yishingiz kerak">?</div>
             </div>
           </div>
           
           <div class="step-card">
             <div class="step-number">5</div>
             <div class="step-content">
-              <h3>Complete installation</h3>
-              <p>Click "Install" and wait for the process to complete</p>
+              <h3>Oxxirgi oyna </h3>
+              <p>"Install" tugmasini bosing va biroz kuting. Dastur computeringiz xarakteristikasiga muvofiq 10 daqiqa ichida o'rnatiladi va tayyor bo'ladi.</p>
             </div>
           </div>
         </div>
         
         <div class="image-container parallax">
-          <img src="https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg" alt="VS Code installation" class="tutorial-image">
-          <div class="image-caption">VS Code installation wizard</div>
+          <img src="images/vs code finish.png" alt="VS Code installation" class="tutorial-image">
+          <div class="image-caption">VS Code tayyor bo'lganda shu oyna paydo bo'ladi</div>
         </div>
         
         <div class="info-card success">
           <div class="info-icon">✓</div>
           <div class="info-content">
-            <h3>Success Check</h3>
-            <p>To verify the installation, launch VS Code from the Start menu or desktop shortcut. You should see the welcome screen.</p>
+            <h3>Hammasi tayyor</h3>
+            <p>Vs Code dastur yozish uchun tayyor. Dasturlash olamiga xush kelibsiz!</p>
           </div>
         </div>
         
         <div class="navigation-buttons">
-          <button class="nav-button prev-button" data-prev="vscode-download">Previous: Download VSCode</button>
-          <button class="nav-button next-button" data-next="python-download">Next: Download Python</button>
+          <button class="nav-button prev-button" data-prev="vscode-download">Orqaga: VSCode yuklab olish</button>
+          <button class="nav-button next-button" data-next="python-download">Keyingi: Python yuklab olish</button>
         </div>
       </div>
     </section>
