@@ -1,0 +1,253 @@
+/* ==== Responsive Breakpoints ==== */
+
+/* Small devices (phones, 576px and under) */
+@media only screen and (max-width: 576px) {
+  /* Typography adjustments */
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  /* Layout adjustments */
+  main {
+    padding: var(--space-4) var(--space-2);
+  }
+  
+  .header-content {
+    padding: var(--space-3);
+  }
+  
+  /* Component adjustments */
+  .step-card {
+    flex-direction: column;
+  }
+  
+  .step-number {
+    margin-right: 0;
+    margin-bottom: var(--space-2);
+  }
+  
+  .navigation-buttons {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .popup {
+    width: 95%;
+  }
+  
+  /* Progress tracker adjustments */
+  .progress-steps {
+    display: none;
+  }
+  
+  .progress-steps-mobile {
+    display: flex;
+  }
+  
+  /* Theme toggle position */
+  .theme-toggle {
+    top: var(--space-2);
+    right: var(--space-2);
+  }
+  
+  .sound-toggle {
+    top: var(--space-2);
+    right: calc(var(--space-2) + 70px);
+  }
+  
+  /* Code snippet scroll */
+  pre {
+    font-size: 0.75rem;
+  }
+}
+
+/* Medium devices (tablets, 577px to 991px) */
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+  /* Typography adjustments */
+  .title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.75rem;
+  }
+  
+  /* Component adjustments */
+  .step-name {
+    display: none;
+  }
+  
+  .navigation-buttons {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+}
+
+/* Large devices (desktop, 992px and above) */
+@media only screen and (min-width: 992px) {
+  /* Enable more advanced effects for desktop */
+  .step-name {
+    display: block;
+  }
+  
+  /* Enhanced hover effects */
+  .resource-link:hover {
+    transform: translateX(10px);
+  }
+  
+  /* Larger images */
+  .image-container {
+    max-height: 500px;
+  }
+  
+  /* Enable fancy animations */
+  .header-content {
+    max-width: 800px;
+  }
+}
+
+/* Mobile navigation menu */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: var(--z-dropdown);
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-bg-elevated);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background-color: var(--color-bg-surface);
+  z-index: var(--z-dropdown);
+  padding: var(--space-4);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-lg);
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mobile-menu-item {
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobile-menu-item.active {
+  background-color: var(--color-bg-elevated);
+  color: var(--color-primary);
+}
+
+.mobile-menu-item:hover {
+  background-color: var(--color-bg-elevated);
+}
+
+/* Show mobile menu on small screens */
+@media only screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .progress-tracker {
+    padding-left: 60px;
+  }
+}
+
+/* Adjust step indicators for different screen sizes */
+@media only screen and (max-width: 767px) {
+  .step-indicator {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Optimize images for different screen sizes */
+@media only screen and (max-width: 576px) {
+  .image-container {
+    margin: var(--space-3) 0;
+  }
+}
+
+/* Hide some elements on small screens */
+@media only screen and (max-width: 480px) {
+  .step-name {
+    display: none;
+  }
+  
+  .image-caption {
+    font-size: 0.7rem;
+    padding: var(--space-2);
+  }
+}
+
+/* Optimize for print */
+@media print {
+  .theme-toggle,
+  .sound-toggle,
+  .mobile-menu-toggle,
+  .custom-cursor,
+  .cursor-follower,
+  .background-animation,
+  .celebration-animation,
+  .navigation-buttons {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .tutorial-section {
+    display: block !important;
+    page-break-after: always;
+  }
+  
+  a {
+    color: blue !important;
+    text-decoration: underline !important;
+  }
+  
+  .progress-tracker {
+    position: static;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,163 @@
+/* ==== Custom Cursor Styles ==== */
+
+/* Hide default cursor */
+* {
+  cursor: none;
+}
+
+/* Main cursor */
+.custom-cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transition: transform 0.1s ease;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+/* Cursor follower (larger outer circle) */
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: calc(var(--z-cursor) - 1);
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, border 0.3s ease;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+/* Cursor states */
+.cursor-active .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: var(--color-accent);
+}
+
+.cursor-active .cursor-follower {
+  transform: translate(-50%, -50%) scale(0.75);
+  opacity: 0.3;
+}
+
+/* Link hover */
+.cursor-link .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: var(--color-primary);
+}
+
+.cursor-link .cursor-follower {
+  transform: translate(-50%, -50%) scale(1.2);
+  border-color: var(--color-primary);
+  opacity: 0.5;
+}
+
+/* Button hover */
+.cursor-button .custom-cursor {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: white;
+}
+
+.cursor-button .cursor-follower {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+
+/* Text hover */
+.cursor-text .custom-cursor {
+  width: 2px;
+  height: 24px;
+  border-radius: 1px;
+  background-color: var(--color-accent);
+}
+
+.cursor-text .cursor-follower {
+  opacity: 0;
+}
+
+/* Image zoom hover */
+.cursor-zoom .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: white;
+}
+
+.cursor-zoom .cursor-follower {
+  width: 60px;
+  height: 60px;
+  border-color: white;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cursor-zoom .cursor-follower:before {
+  content: '+';
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Tooltip hover */
+.cursor-help .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: var(--color-secondary);
+}
+
+.cursor-help .cursor-follower {
+  width: 50px;
+  height: 50px;
+  border-color: var(--color-secondary);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cursor-help .cursor-follower:before {
+  content: '?';
+  color: var(--color-secondary);
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cursor animation for clickable state */
+@keyframes cursorPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+.cursor-clickable .cursor-follower {
+  animation: cursorPulse 1.5s infinite;
+  border-color: var(--color-accent);
+}
+
+/* Media query for touch devices */
+@media (hover: none) {
+  .custom-cursor, .cursor-follower {
+    display: none;
+  }
+  
+  * {
+    cursor: auto;
+  }
+  
+  a, button, [role="button"] {
+    cursor: pointer;
+  }
+}

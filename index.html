@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSCode & Python Installation Guide</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-theme">
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+  
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" class="theme-switch">
+    <label for="theme-switch" class="switch-label">
+      <span class="toggle-track">
+        <span class="sun-icon">🌞</span>
+        <span class="moon-icon">🌙</span>
+      </span>
+    </label>
+  </div>
+
+  <div class="sound-toggle">
+    <button id="sound-button" aria-label="Toggle sound">
+      <span class="sound-on">🔊</span>
+      <span class="sound-off">🔇</span>
+    </button>
+  </div>
+  
+  <header>
+    <div class="background-animation">
+      <canvas id="particles"></canvas>
+    </div>
+    <div class="header-content">
+      <h1 class="title reveal-text">VSCode & Python</h1>
+      <h2 class="subtitle reveal-text">Installation Guide for Windows 11</h2>
+      <p class="description reveal-text">A step-by-step visual tutorial to get you coding in no time</p>
+      <button id="start-guide" class="cta-button">Start Installation Guide</button>
+    </div>
+  </header>
+
+  <nav class="progress-tracker">
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <ul class="progress-steps">
+      <li class="step active" data-step="intro">
+        <div class="step-indicator">1</div>
+        <span class="step-name">Introduction</span>
+      </li>
+      <li class="step" data-step="vscode-download">
+        <div class="step-indicator">2</div>
+        <span class="step-name">Download VSCode</span>
+      </li>
+      <li class="step" data-step="vscode-install">
+        <div class="step-indicator">3</div>
+        <span class="step-name">Install VSCode</span>
+      </li>
+      <li class="step" data-step="python-download">
+        <div class="step-indicator">4</div>
+        <span class="step-name">Download Python</span>
+      </li>
+      <li class="step" data-step="python-install">
+        <div class="step-indicator">5</div>
+        <span class="step-name">Install Python</span>
+      </li>
+      <li class="step" data-step="vscode-python">
+        <div class="step-indicator">6</div>
+        <span class="step-name">Setup Python in VSCode</span>
+      </li>
+      <li class="step" data-step="conclusion">
+        <div class="step-indicator">7</div>
+        <span class="step-name">Conclusion</span>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="intro" class="tutorial-section active">
+      <div class="section-content">
+        <h2 class="section-title">Getting Started</h2>
+        <p class="section-description">Welcome to this interactive guide for installing Visual Studio Code and Python on Windows 11. This tutorial will walk you through each step with visual examples and clear instructions.</p>
+        
+        <div class="info-card">
+          <div class="info-icon">ℹ️</div>
+          <div class="info-content">
+            <h3>What you'll need</h3>
+            <ul>
+              <li>Windows 11 operating system</li>
+              <li>Administrator access to your computer</li>
+              <li>Internet connection</li>
+              <li>Approximately 15-20 minutes of time</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="image-container parallax">
+          <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg" alt="Coding environment with computer" class="tutorial-image">
+          <div class="image-caption">Your development environment awaits</div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button next-button" data-next="vscode-download">Next: Download VSCode</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="vscode-download" class="tutorial-section">
+      <div class="section-content">
+        <h2 class="section-title">Downloading Visual Studio Code</h2>
+        <p class="section-description">Let's start by downloading Visual Studio Code, a powerful and lightweight code editor perfect for Python development.</p>
+        
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Open your web browser</h3>
+              <p>Launch any web browser on your Windows 11 computer</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Visit the VS Code website</h3>
+              <p>Navigate to <a href="https://code.visualstudio.com/" class="external-link" target="_blank">https://code.visualstudio.com/</a></p>
+              <div class="tooltip" data-tooltip="Click this link to open in a new tab">?</div>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Download for Windows</h3>
+              <p>Click the download button for Windows</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="image-container parallax">
+          <img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg" alt="VS Code download page" class="tutorial-image">
+          <div class="image-caption">The VS Code download page</div>
+        </div>
+        
+        <div class="info-card warning">
+          <div class="info-icon">⚠️</div>
+          <div class="info-content">
+            <h3>Important Note</h3>
+            <p>Make sure to download the stable version for Windows, not the Insiders edition (unless you specifically want to try beta features).</p>
+          </div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button prev-button" data-prev="intro">Previous: Introduction</button>
+          <button class="nav-button next-button" data-next="vscode-install">Next: Install VSCode</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="vscode-install" class="tutorial-section">
+      <div class="section-content">
+        <h2 class="section-title">Installing Visual Studio Code</h2>
+        <p class="section-description">Now that you've downloaded the VS Code installer, let's go through the installation process.</p>
+        
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Run the installer</h3>
+              <p>Locate the downloaded file (usually in your Downloads folder) and double-click it</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Accept the agreement</h3>
+              <p>Read and accept the license agreement</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Choose installation location</h3>
+              <p>Select where you want to install VS Code or use the default location</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Select additional tasks</h3>
+              <p>Choose options like "Add to PATH" (recommended) and "Create desktop icon"</p>
+              <div class="tooltip" data-tooltip="Adding to PATH allows you to open VS Code from the command line">?</div>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Complete installation</h3>
+              <p>Click "Install" and wait for the process to complete</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="image-container parallax">
+          <img src="https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg" alt="VS Code installation" class="tutorial-image">
+          <div class="image-caption">VS Code installation wizard</div>
+        </div>
+        
+        <div class="info-card success">
+          <div class="info-icon">✓</div>
+          <div class="info-content">
+            <h3>Success Check</h3>
+            <p>To verify the installation, launch VS Code from the Start menu or desktop shortcut. You should see the welcome screen.</p>
+          </div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button prev-button" data-prev="vscode-download">Previous: Download VSCode</button>
+          <button class="nav-button next-button" data-next="python-download">Next: Download Python</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="python-download" class="tutorial-section">
+      <div class="section-content">
+        <h2 class="section-title">Downloading Python</h2>
+        <p class="section-description">Next, let's download Python, the programming language we'll be using with VS Code.</p>
+        
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Visit the Python website</h3>
+              <p>Navigate to <a href="https://www.python.org/downloads/" class="external-link" target="_blank">https://www.python.org/downloads/</a></p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Download the latest version</h3>
+              <p>Click the "Download Python [latest version]" button</p>
+              <div class="tooltip" data-tooltip="As of 2025, Python 3.12 or newer is recommended">?</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="image-container parallax">
+          <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="Python website" class="tutorial-image">
+          <div class="image-caption">The Python download page</div>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">ℹ️</div>
+          <div class="info-content">
+            <h3>Version Information</h3>
+            <p>Python 3.x is the current standard. Avoid Python 2.x as it's no longer supported.</p>
+          </div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button prev-button" data-prev="vscode-install">Previous: Install VSCode</button>
+          <button class="nav-button next-button" data-next="python-install">Next: Install Python</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="python-install" class="tutorial-section">
+      <div class="section-content">
+        <h2 class="section-title">Installing Python</h2>
+        <p class="section-description">Now that you've downloaded Python, let's install it on your Windows 11 system.</p>
+        
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Run the installer</h3>
+              <p>Locate the downloaded Python installer and double-click it</p>
+            </div>
+          </div>
+          
+          <div class="step-card highlight-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Enable important options</h3>
+              <p>Check "Add Python to PATH" (very important!)</p>
+              <div class="tooltip" data-tooltip="This allows you to run Python from any command prompt">!</div>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Choose installation type</h3>
+              <p>Select "Customize installation" for more options</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Select optional features</h3>
+              <p>Ensure "pip" and "Python test suite" are selected</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Advanced options</h3>
+              <p>Set your installation location and click "Install"</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="image-container parallax">
+          <img src="https://images.pexels.com/photos/4709289/pexels-photo-4709289.jpeg" alt="Python installation" class="tutorial-image">
+          <div class="image-caption">Python installation with PATH option highlighted</div>
+        </div>
+        
+        <div class="info-card warning">
+          <div class="info-icon">⚠️</div>
+          <div class="info-content">
+            <h3>Common Issue</h3>
+            <p>If you forget to check "Add Python to PATH," you can fix it later by modifying your system's environment variables or reinstalling Python.</p>
+          </div>
+        </div>
+        
+        <div class="code-snippet">
+          <div class="code-header">
+            <span class="code-title">Verify installation in Command Prompt</span>
+            <button class="copy-button" data-clipboard-target="#python-version-cmd">Copy</button>
+          </div>
+          <pre id="python-version-cmd"><code>python --version</code></pre>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button prev-button" data-prev="python-download">Previous: Download Python</button>
+          <button class="nav-button next-button" data-next="vscode-python">Next: Setup Python in VSCode</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="vscode-python" class="tutorial-section">
+      <div class="section-content">
+        <h2 class="section-title">Setting up Python in VS Code</h2>
+        <p class="section-description">Finally, let's configure VS Code to work with Python so you can start coding.</p>
+        
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Open VS Code</h3>
+              <p>Launch Visual Studio Code from the Start menu or desktop</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Install Python extension</h3>
+              <p>Open the Extensions view (Ctrl+Shift+X) and search for "Python"</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Install Microsoft's Python extension</h3>
+              <p>Click "Install" on the official Microsoft Python extension</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Create a Python file</h3>
+              <p>Create a new file with a .py extension (e.g., hello.py)</p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Select Python interpreter</h3>
+              <p>VS Code will prompt you to select a Python interpreter. Choose the one you installed.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="image-container parallax">
+          <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg" alt="VS Code with Python" class="tutorial-image">
+          <div class="image-caption">VS Code with Python extension</div>
+        </div>
+        
+        <div class="code-snippet">
+          <div class="code-header">
+            <span class="code-title">Your first Python program</span>
+            <button class="copy-button" data-clipboard-target="#first-python">Copy</button>
+          </div>
+          <pre id="first-python"><code>print("Hello, World!")</code></pre>
+        </div>
+        
+        <div class="info-card success">
+          <div class="info-icon">✓</div>
+          <div class="info-content">
+            <h3>Final Check</h3>
+            <p>To verify everything is working properly, write a simple Python program and run it using the Run button (▶️) in the top-right corner of VS Code.</p>
+          </div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button prev-button" data-prev="python-install">Previous: Install Python</button>
+          <button class="nav-button next-button" data-next="conclusion">Next: Conclusion</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusion" class="tutorial-section">
+      <div class="section-content">
+        <h2 class="section-title">Congratulations!</h2>
+        <p class="section-description">You've successfully installed Visual Studio Code and Python on your Windows 11 computer. You're now ready to start coding!</p>
+        
+        <div class="celebration-animation">
+          <div class="confetti"></div>
+          <div class="success-icon">🎉</div>
+        </div>
+        
+        <div class="next-steps">
+          <h3>What's Next?</h3>
+          <ul>
+            <li>Try writing more complex Python programs</li>
+            <li>Explore additional VS Code extensions</li>
+            <li>Learn about virtual environments for Python</li>
+            <li>Follow Python tutorials to improve your skills</li>
+          </ul>
+        </div>
+        
+        <div class="resource-links">
+          <h3>Helpful Resources</h3>
+          <a href="https://code.visualstudio.com/docs/python/python-tutorial" class="resource-link" target="_blank">
+            <div class="resource-icon">📚</div>
+            <div class="resource-text">VS Code Python Tutorial</div>
+          </a>
+          <a href="https://docs.python.org/3/tutorial/" class="resource-link" target="_blank">
+            <div class="resource-icon">🐍</div>
+            <div class="resource-text">Official Python Tutorial</div>
+          </a>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button prev-button" data-prev="vscode-python">Previous: Setup Python in VSCode</button>
+          <button class="nav-button restart-button" data-restart="intro">Restart Guide</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Created with ❤️ for Windows 11 developers</p>
+      <p>© 2025 VSCode & Python Installation Guide</p>
+    </div>
+  </footer>
+
+  <div class="popup-container" id="hint-popup">
+    <div class="popup">
+      <div class="popup-header">
+        <h3 class="popup-title">Helpful Hint</h3>
+        <button class="close-popup">&times;</button>
+      </div>
+      <div class="popup-content">
+        <p class="popup-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js" type="module"></script>
+  <audio id="click-sound" preload="auto">
+    <source src="/sounds/click.mp3" type="audio/mpeg">
+    <source src="/sounds/click.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="switch-sound" preload="auto">
+    <source src="/sounds/switch.mp3" type="audio/mpeg">
+    <source src="/sounds/switch.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="success-sound" preload="auto">
+    <source src="/sounds/success.mp3" type="audio/mpeg">
+    <source src="/sounds/success.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>

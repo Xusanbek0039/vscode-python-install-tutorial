@@ -1,0 +1,273 @@
+/* ==== Theme Variables & Settings ==== */
+
+/* Dark Theme (Default) */
+.dark-theme {
+  /* Primary Colors */
+  --color-primary: #00A3FF;
+  --color-primary-light: #4CC2FF;
+  --color-primary-dark: #0076BC;
+  
+  /* Secondary Colors */
+  --color-secondary: #9D50FF;
+  --color-secondary-light: #BE8AFF;
+  --color-secondary-dark: #7A26DB;
+  
+  /* Accent Color */
+  --color-accent: #FF4185;
+  
+  /* Background Colors */
+  --color-bg-main: #121212;
+  --color-bg-surface: #1E1E1E;
+  --color-bg-elevated: #2D2D2D;
+  
+  /* Text Colors */
+  --color-text-primary: rgba(255, 255, 255, 0.9);
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-tertiary: rgba(255, 255, 255, 0.5);
+  
+  /* Border Colors */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+  
+  /* Status Colors */
+  --color-success: #0CCA4A;
+  --color-warning: #FFCA28;
+  --color-error: #FF4444;
+  
+  /* Shadow */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.9);
+  
+  /* Gradient */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+  
+  /* Neon Effects */
+  --neon-primary: 0 0 10px rgba(0, 163, 255, 0.7);
+  --neon-secondary: 0 0 10px rgba(157, 80, 255, 0.7);
+  
+  /* Apply base styles */
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+}
+
+/* Light Theme */
+.light-theme {
+  /* Primary Colors */
+  --color-primary: #0065A9;
+  --color-primary-light: #0083DB;
+  --color-primary-dark: #004A7F;
+  
+  /* Secondary Colors */
+  --color-secondary: #7E19E8;
+  --color-secondary-light: #9E50FF;
+  --color-secondary-dark: #5B10B5;
+  
+  /* Accent Color */
+  --color-accent: #E40B72;
+  
+  /* Background Colors */
+  --color-bg-main: #F5F9FF;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-elevated: #EDF4FF;
+  
+  /* Text Colors */
+  --color-text-primary: rgba(0, 0, 0, 0.87);
+  --color-text-secondary: rgba(0, 0, 0, 0.6);
+  --color-text-tertiary: rgba(0, 0, 0, 0.38);
+  
+  /* Border Colors */
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border-hover: rgba(0, 0, 0, 0.24);
+  
+  /* Status Colors */
+  --color-success: #00A14B;
+  --color-warning: #F5A623;
+  --color-error: #D60000;
+  
+  /* Shadow */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+  
+  /* Gradient */
+  --gradient-primary: linear-gradient(135deg, #E4F4FF 0%, #F9F0FF 100%);
+  --gradient-accent: linear-gradient(135deg, #FFE8F3 0%, #F2E8FF 100%);
+  
+  /* Neon Effects - Not used in light mode but kept for consistency */
+  --neon-primary: none;
+  --neon-secondary: none;
+  
+  /* Apply base styles */
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+}
+
+/* ==== Apply theme to elements ==== */
+
+/* Headers & Titles */
+.title, .section-title, .popup-title {
+  color: var(--color-text-primary);
+}
+
+.subtitle, h3 {
+  color: var(--color-text-secondary);
+}
+
+/* Background elements */
+header .background-animation {
+  opacity: 0.8;
+}
+
+.dark-theme header .background-animation {
+  opacity: 0.6;
+}
+
+/* Cards and containers */
+.step-card, .info-card, .popup, .code-snippet {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark-theme .step-card:hover,
+.dark-theme .nav-button:hover {
+  box-shadow: var(--neon-primary);
+}
+
+/* Theme toggle appearance */
+.theme-toggle {
+  position: fixed;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: var(--z-dropdown);
+}
+
+.theme-switch {
+  opacity: 0;
+  position: absolute;
+}
+
+.switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  border-radius: 100px;
+  background-color: var(--color-bg-elevated);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-normal);
+}
+
+.toggle-track {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.sun-icon, .moon-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.theme-switch:checked + .switch-label:before {
+  transform: translateX(30px);
+}
+
+.switch-label:before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 45px;
+  top: 3px;
+  left: 3px;
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.dark-theme .moon-icon {
+  opacity: 1;
+}
+
+.dark-theme .sun-icon {
+  opacity: 0.3;
+}
+
+.light-theme .moon-icon {
+  opacity: 0.3;
+}
+
+.light-theme .sun-icon {
+  opacity: 1;
+}
+
+/* Transition between themes */
+body {
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+body.theme-transition * {
+  transition: background-color 0.6s ease, 
+              color 0.6s ease, 
+              border-color 0.6s ease, 
+              box-shadow 0.6s ease !important;
+}
+
+/* Status color applications */
+.info-card.success {
+  border-left: 4px solid var(--color-success);
+}
+
+.info-card.warning {
+  border-left: 4px solid var(--color-warning);
+}
+
+.info-card.error {
+  border-left: 4px solid var(--color-error);
+}
+
+/* Sound toggle */
+.sound-toggle {
+  position: fixed;
+  top: var(--space-3);
+  right: calc(var(--space-3) + 70px);
+  z-index: var(--z-dropdown);
+}
+
+.sound-toggle button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-bg-elevated);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.sound-off {
+  display: none;
+}
+
+body.sound-muted .sound-on {
+  display: none;
+}
+
+body.sound-muted .sound-off {
+  display: block;
+}

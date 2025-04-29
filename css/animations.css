@@ -1,0 +1,330 @@
+/* ==== Text Animations ==== */
+
+/* Reveal animation for text */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealText 1s forwards;
+}
+
+.title.reveal-text {
+  animation-delay: 0.2s;
+}
+
+.subtitle.reveal-text {
+  animation-delay: 0.4s;
+}
+
+.description.reveal-text {
+  animation-delay: 0.6s;
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button hover animation */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.cta-button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* Scroll-triggered animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered fade-in for step cards */
+.step-card {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.step-card.visible {
+  animation: fadeInUp 0.5s forwards;
+}
+
+.step-card:nth-child(2).visible {
+  animation-delay: 0.1s;
+}
+
+.step-card:nth-child(3).visible {
+  animation-delay: 0.2s;
+}
+
+.step-card:nth-child(4).visible {
+  animation-delay: 0.3s;
+}
+
+.step-card:nth-child(5).visible {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax effect */
+.parallax {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax img {
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* 3D Tilt animation */
+.tilt {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: transform 0.3s ease;
+}
+
+.tilt-inner {
+  transform: translateZ(30px);
+  transition: transform 0.3s ease;
+}
+
+/* Theme switch animation */
+.theme-switch + .switch-label {
+  transition: background-color 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.theme-switch + .switch-label:before {
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.theme-switch:checked + .switch-label {
+  background-color: var(--color-primary);
+}
+
+/* Progress bar animation */
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+/* Confetti animation for celebration */
+.confetti {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  top: 0;
+  opacity: 0;
+}
+
+.confetti-piece:nth-child(1) {
+  left: 10%;
+  transform: rotate(15deg);
+  background: var(--color-primary);
+  animation: makeItRain 1s ease-out infinite;
+}
+
+.confetti-piece:nth-child(2) {
+  left: 20%;
+  transform: rotate(85deg);
+  background: var(--color-secondary);
+  animation: makeItRain 1.5s ease-out infinite;
+}
+
+.confetti-piece:nth-child(3) {
+  left: 30%;
+  transform: rotate(185deg);
+  background: var(--color-accent);
+  animation: makeItRain 1.2s ease-out infinite;
+}
+
+.confetti-piece:nth-child(4) {
+  left: 40%;
+  transform: rotate(65deg);
+  background: var(--color-success);
+  animation: makeItRain 2.5s ease-out infinite;
+}
+
+.confetti-piece:nth-child(5) {
+  left: 50%;
+  transform: rotate(115deg);
+  background: var(--color-primary);
+  animation: makeItRain 1.8s ease-out infinite;
+}
+
+.confetti-piece:nth-child(6) {
+  left: 60%;
+  transform: rotate(145deg);
+  background: var(--color-secondary);
+  animation: makeItRain 2.2s ease-out infinite;
+}
+
+.confetti-piece:nth-child(7) {
+  left: 70%;
+  transform: rotate(85deg);
+  background: var(--color-accent);
+  animation: makeItRain 1.6s ease-out infinite;
+}
+
+.confetti-piece:nth-child(8) {
+  left: 80%;
+  transform: rotate(115deg);
+  background: var(--color-success);
+  animation: makeItRain 2.5s ease-out infinite;
+}
+
+.confetti-piece:nth-child(9) {
+  left: 90%;
+  transform: rotate(145deg);
+  background: var(--color-primary);
+  animation: makeItRain 1.3s ease-out infinite;
+}
+
+@keyframes makeItRain {
+  from {
+    opacity: 0;
+    transform: translateY(0) scale(0) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20vh) scale(1) rotate(180deg);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(90vh) scale(0.3) rotate(360deg);
+  }
+}
+
+/* Section transition */
+.tutorial-section {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.tutorial-section.animate-out {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.tutorial-section.animate-in {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* Loading animations */
+.loading-circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
