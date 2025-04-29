@@ -14,7 +14,7 @@
 
 .cta-button {
   background: var(--gradient-primary);
-  color: white;
+  color: rgb(52, 52, 52);
   padding: var(--space-3) var(--space-5);
   font-size: 1.125rem;
   box-shadow: var(--shadow-md);

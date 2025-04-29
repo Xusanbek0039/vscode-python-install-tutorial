@@ -21,9 +21,9 @@
   --color-bg-elevated: #2D2D2D;
   
   /* Text Colors */
-  --color-text-primary: rgba(255, 255, 255, 0.9);
-  --color-text-secondary: rgba(255, 255, 255, 0.7);
-  --color-text-tertiary: rgba(255, 255, 255, 0.5);
+  --color-text-primary: rgb(255, 255, 255);
+  --color-text-secondary: rgb(255, 255, 255);
+  --color-text-tertiary: rgb(255, 255, 255);
   
   /* Border Colors */
   --color-border: rgba(255, 255, 255, 0.1);
@@ -73,12 +73,12 @@
   --color-bg-elevated: #EDF4FF;
   
   /* Text Colors */
-  --color-text-primary: rgba(0, 0, 0, 0.87);
-  --color-text-secondary: rgba(0, 0, 0, 0.6);
-  --color-text-tertiary: rgba(0, 0, 0, 0.38);
+  --color-text-primary: rgb(0, 0, 0);
+  --color-text-secondary: rgb(0, 0, 0);
+  --color-text-tertiary: rgb(0, 0, 0);
   
   /* Border Colors */
-  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border: rgba(0, 0, 0, 0.845);
   --color-border-hover: rgba(0, 0, 0, 0.24);
   
   /* Status Colors */
